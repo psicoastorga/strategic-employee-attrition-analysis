@@ -14,5 +14,4 @@ Data-driven approach to understanding employee turnover and building predictive 
 📈 Implicancias estratégicas
 
 📎 Link a notebook
-
 📎 Link a tu LinkedIn
