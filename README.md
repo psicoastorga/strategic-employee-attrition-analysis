@@ -1,5 +1,5 @@
-# strategic-employee-attrition-analysis
-Data-driven approach to understanding employee turnover and building predictive models to support strategic HR decision-making.
+Análisis Estratégico de Rotación de Empleados
+Enfoque basado en datos para comprender la rotación de empleados y construir modelos predictivos que respalden la toma de decisiones estratégicas en recursos humanos.
 
 📌 Contexto del problema
 La rotación de empleados representa uno de los principales costos ocultos para las organizaciones. La pérdida de talento implica gastos de reclutamiento, entrenamiento y pérdida de conocimiento organizacional.
