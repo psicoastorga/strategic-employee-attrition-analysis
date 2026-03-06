@@ -6,6 +6,7 @@ Data-driven approach to understanding employee turnover and building predictive 
 🎯 Objetivo del análisis
 
 🛠 Tecnologías usadas
+jupyter.org | Python | Pandas
 
 📊 Principales hallazgos
 
