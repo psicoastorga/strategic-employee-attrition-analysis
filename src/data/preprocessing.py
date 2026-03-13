@@ -1,39 +1,51 @@
-# Archivo: src/data/preprocessing.py
-# Transformaciones y codificación de variables
+# src/data/preprocessing.py
 
 import pandas as pd
 
-# Codificación de variables binarias
-def encode_binary_variables(df):
-
-    df['Attrition'] = df['Attrition'].map({'No':0,'Yes':1})
-    df['Gender'] = df['Gender'].map({'Male':0,'Female':1})
-    df['OverTime'] = df['OverTime'].map({'No':0,'Yes':1})
-
-    return df
+BINARY_MAP = {
+    'Attrition': {'No':0,'Yes':1},
+    'Gender': {'Male':0,'Female':1},
+    'OverTime': {'No':0,'Yes':1}
+}
 
 
-# Conversión de variables ordinales
-def convert_ordinal_variables(df):
+def encode_binary_variables(df: pd.DataFrame) -> pd.DataFrame:
+    """Encode binary categorical variables."""
 
-    df['Education'] = pd.Categorical(df['Education'], ordered=True)
-    df['JobInvolvement'] = pd.Categorical(df['JobInvolvement'], ordered=True)
-    df['PerformanceRating'] = pd.Categorical(df['PerformanceRating'], ordered=True)
+    for col, mapping in BINARY_MAP.items():
+        df[col] = df[col].map(mapping)
 
     return df
 
 
-# Conversión de variables categóricas
-def convert_categorical_variables(df):
+ORDINAL_COLUMNS = [
+    'Education',
+    'JobInvolvement',
+    'PerformanceRating'
+]
 
-    cols = [
-        'BusinessTravel',
-        'Department',
-        'EducationField',
-        'JobRole',
-        'MaritalStatus'
-    ]
 
-    df[cols] = df[cols].astype('category')
+def convert_ordinal_variables(df: pd.DataFrame) -> pd.DataFrame:
+    """Convert ordinal variables to ordered categories."""
+
+    for col in ORDINAL_COLUMNS:
+        df[col] = pd.Categorical(df[col], ordered=True)
+
+    return df
+
+
+CATEGORICAL_COLUMNS = [
+    'BusinessTravel',
+    'Department',
+    'EducationField',
+    'JobRole',
+    'MaritalStatus'
+]
+
+
+def convert_categorical_variables(df: pd.DataFrame) -> pd.DataFrame:
+    """Convert nominal variables to categorical dtype."""
+
+    df[CATEGORICAL_COLUMNS] = df[CATEGORICAL_COLUMNS].astype('category')
 
     return df
