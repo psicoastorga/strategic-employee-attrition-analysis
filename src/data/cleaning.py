@@ -1,12 +1,16 @@
-# Archivo: src/data/cleaning.py
-# Limpieza inicial del dataset de rotación de empleados
+# src/data/cleaning.py
 
 import pandas as pd
 
-# Eliminación de columnas con valor constante
-def drop_constant_columns(df):
-    return df.drop(columns=['EmployeeCount','Over18','StandardHours'])
+CONSTANT_COLUMNS = ['EmployeeCount', 'Over18', 'StandardHours']
+ID_COLUMNS = ['EmployeeNumber']
 
-# Eliminación de identificadores
-def drop_id_columns(df):
-    return df.drop(columns=['EmployeeNumber'])
+
+def drop_constant_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove columns with constant values."""
+    return df.drop(columns=CONSTANT_COLUMNS)
+
+
+def drop_id_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove identifier columns."""
+    return df.drop(columns=ID_COLUMNS)
