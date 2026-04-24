@@ -1,6 +1,6 @@
-La Rotación de Empleados
+La Rotación de Personal
 
-La rotación de empleados representa uno de los costos ocultos más relevantes en las organizaciones. Cuando un empleado abandona la empresa se generan múltiples impactos: costos de reclutamiento, tiempo de entrenamiento, pérdida de conocimiento organizacional y disrupción en los equipos de trabajo. Los factores que lo determinan son múltiples: condiciones laborales, trayectorias profesionales, incentivos organizacionales, características individuales, etc.
+Representa uno de los costos ocultos más relevantes en las organizaciones. Cuando un empleado abandona la empresa se generan múltiples impactos: costos de reclutamiento, tiempo de entrenamiento, pérdida de conocimiento organizacional y disrupción en los equipos de trabajo. Los factores que lo determinan son múltiples: condiciones laborales, trayectorias profesionales, incentivos organizacionales, características individuales, etc.
 
 Base de datos utilizada: IBM HR Employee Attrition Dataset
 
